@@ -65,13 +65,16 @@ class board():
             return False
         #Check row
         for n,i in enumerate (self.row_check):
-            if n == self.num - 1:
-                for ii in range (self.num):
-                    if self.number == self.row_check[ii]:
-                        return False
-            else:
-                if self.number == i:
+            if i != 0:
+                if self.num == n and self.col != i:
                     return False
+                if n == self.num - 1:
+                    for ii in range (self.num):
+                        if self.number == self.row_check[ii]:
+                            return False
+                else:
+                    if self.number == i:
+                        return False
         #Check column
         for i in range (self.size):
             if self.number == self.bo[i][self.col] and self.row != i:
@@ -82,7 +85,7 @@ class board():
 
         for i in range (self.box_y*3, self.box_y*3 + 3):
             for j in range (self.box_x*3, self.box_x*3 + 3):
-                if self.number == self.bo[j][i]:
+                if self.number == self.bo[i][j] and (i,j) != (row,col):
                     return False    
         return True
 
@@ -108,7 +111,7 @@ class board():
 
 
 if __name__ == "__main__":
-    game = board = ([
+    game = board([
     [7,8,0,4,0,0,1,2,0],
     [6,0,0,0,7,5,0,0,9],
     [0,0,0,6,0,1,0,7,8],

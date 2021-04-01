@@ -89,8 +89,11 @@ def solve(bo):
             bo[row][col] = 0
             
     return False
+def main():
+    print_board(board)
+    solve(board)
+    print("___________________")
+    print_board(board)
 
-print_board(board)
-solve(board)
-print("___________________")
-print_board(board)
+if __name__ == "__main__":
+    main()

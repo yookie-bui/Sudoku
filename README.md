@@ -1,4 +1,2 @@
 # Sudoku
-Created on March 22 2021\
-By Yookie\
-Object Oriented Programming
+Classical SUDOKU game which is developed in Python, available in text base version

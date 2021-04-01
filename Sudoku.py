@@ -67,7 +67,7 @@ class board():
         for n,i in enumerate (self.row_check):
             if n == self.num - 1:
                 for ii in range (self.num):
-                    if self.input_num == self.row_check[ii]:
+                    if self.number == self.row_check[ii]:
                         return False
             else:
                 if self.number == i:

@@ -66,8 +66,8 @@ class board():
         #Check row
         for n,i in enumerate (self.row_check):
             if n == self.num - 1:
-                for ij in range (self.num):
-                    if self.input_num == self.row_check[ii]:
+                for ii in range (self.num):
+                    if self.number == self.row_check[ii]:
                         return False
             else:
                 if self.number == i:
@@ -102,8 +102,8 @@ class board():
                 self.bo[self.row][self.col] = self.input_num
                 self.print_board()
             else:
-                self.find_empty()
-                self.fill_spot()
+                self.find_empty()  #restart the process
+                self.solve()
 
 
 

@@ -102,7 +102,7 @@ class board():
                 self.bo[self.row][self.col] = self.input_num
                 self.print_board()
             else:
-                self.find_empty()
+                self.find_empty() #restart the process
                 self.fill_spot()
 
 
